@@ -27,6 +27,7 @@ public class Student {
     private double rating;
     private String profilePicUrl;
     private String bio;
+    private String strongSubjects;
 
     // ✅ List of subjects instead of a single string
     @ElementCollection
