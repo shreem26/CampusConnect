@@ -23,6 +23,14 @@ public class Student {
     private String branch;
     @Column(name = "student_year")
     private int year;
+    private boolean isTutor;
+    private double rating;
+    private String profilePicUrl;
+    private String bio;
+
+    // ✅ List of subjects instead of a single string
+    @ElementCollection
+    private List<String> subjects = new ArrayList<>();
 
     // ✅ Getters and Setters
     public Integer getId() {
