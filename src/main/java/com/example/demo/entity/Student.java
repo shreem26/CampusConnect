@@ -18,6 +18,7 @@ public class Student {
     private String collegeId;
     private String collegeName;
     private String branch;
+    @Column(name = "student_year")
     private int year;
 
     // ✅ Getters and Setters
