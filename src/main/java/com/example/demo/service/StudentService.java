@@ -18,7 +18,8 @@ public class StudentService {
     public Student saveStudent(Student student) {
         return sr.save(student);
     }
-    public List<Student> getAllStudent(){
+
+    public List<Student> getAllStudent() {
         return sr.findAll();
     }
     public void deleteStudent(Student student){
