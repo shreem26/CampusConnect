@@ -76,8 +76,11 @@ public class StudentService {
         }
         return false;
     }
-    public List<Student> searchBySubject(String subject) {
-        return sr.searchBySubject(subject);
+
+    @GetMapping("/search")
+    public List<Student> searchBySubject(@RequestParam String subject) {
+        return studentService.searchBySubject(subject);
+
     }
 
 }
