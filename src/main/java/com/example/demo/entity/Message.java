@@ -2,6 +2,8 @@ package com.example.demo.entity;
 import java.time.*;
 import jakarta.persistence.*;
 
+@Entity
+@Table(name = "message")
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
