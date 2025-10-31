@@ -16,8 +16,7 @@ public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     // find student by verification token
     Optional<Student> findByVerificationToken(String token);
-
-    List<Student> findByIsTutorTrue();
+    Optional<Student> findByName(String name);
 
     // ✅ For searching tutors whose subjects contain a keyword
     @Query("SELECT s FROM Student s JOIN s.subjects subj WHERE LOWER(subj) LIKE LOWER(CONCAT('%', :subject, '%'))")
