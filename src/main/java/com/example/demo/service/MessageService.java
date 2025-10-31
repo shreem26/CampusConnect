@@ -12,7 +12,7 @@ public class MessageService {
     public Message saveMessage(Message message){
         return mr.save(message);
     }
-    public List<Message> getMessagesBetween(int senderId,int receiverId){
+    public List<Message> getMessagesBetween(String senderId,String receiverId){
         return mr.findBySenderIdAndReceiverId(senderId,receiverId);
     }
     public List<Message> getAllMessages(){
