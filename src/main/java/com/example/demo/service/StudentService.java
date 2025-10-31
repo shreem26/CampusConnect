@@ -9,7 +9,11 @@ import org.springframework.stereotype.*;
 public class StudentService {
     @Autowired
     private StudentRepository sr;
-    public Student saveStudent(Student student){
+
+    @Autowired
+    private StudentService studentService;
+
+    public Student saveStudent(Student student) {
         return sr.save(student);
     }
     public List<Student> getAllStudent(){
