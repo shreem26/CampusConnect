@@ -22,7 +22,8 @@ public class StudentService {
     public List<Student> getAllStudent() {
         return sr.findAll();
     }
-    public void deleteStudent(Student student){
+
+    public void deleteStudent(Student student) {
         sr.delete(student);
     }
     public Student findStudentById(Integer id) {
