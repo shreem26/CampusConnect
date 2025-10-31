@@ -68,5 +68,8 @@ public class StudentService {
         }
         return false;
     }
+    public List<Student> searchBySubject(String subject) {
+        return sr.searchBySubject(subject);
+    }
 
 }
