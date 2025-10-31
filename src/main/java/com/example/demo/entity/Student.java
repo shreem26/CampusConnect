@@ -1,87 +1,93 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Id;
 
 @Entity
 public class Student {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     private String name;
+    private String email;
+    private String password;
+    private boolean verified;
+    private String verificationToken;
+
     private String collegeId;
     private String collegeName;
     private String branch;
     private int year;
-    private boolean isTutor;
-    private String strongSubjects;
-    //private double rating;
-    public void setId(int id){
-        this.id = id;
-    }
-    public void setName(String name){
-        this.name = name;
-    }
-    public void setBranch(String branch) {
-        this.branch = branch;
-    }
 
-    public void setCollegeId(String collegeId) {
-        this.collegeId = collegeId;
-    }
-
-    public void setCollegeName(String collegeName) {
-        this.collegeName = collegeName;
-    }
-
-    public void setTutor(boolean tutor) {
-        isTutor = tutor;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public void setStrongSubjects(String strongSubjects) {
-        this.strongSubjects = strongSubjects;
-    }
-
-    public int getId() {
+    // ✅ Getters and Setters
+    public Integer getId() {
         return id;
     }
-
-    public String getBranch() {
-        return branch;
-    }
-
-    public String getCollegeId() {
-        return collegeId;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public String getCollegeName() {
-        return collegeName;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {
         return name;
     }
-
-    public String getStrongSubjects() {
-        return strongSubjects;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public boolean isTutor() {
-        return isTutor;
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
 
+    public boolean isVerified() {
+        return verified;
+    }
+    public void setVerified(boolean verified) {
+        this.verified = verified;
+    }
+
+    public String getVerificationToken() {
+        return verificationToken;
+    }
+    public void setVerificationToken(String verificationToken) {
+        this.verificationToken = verificationToken;
+    }
+
+    public String getCollegeId() {
+        return collegeId;
+    }
+    public void setCollegeId(String collegeId) {
+        this.collegeId = collegeId;
+    }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
+    }
+
+    public String getBranch() {
+        return branch;
+    }
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    public int getYear() {
+        return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
+    }
 }
