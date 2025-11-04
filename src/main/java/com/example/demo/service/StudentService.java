@@ -60,7 +60,7 @@ public class StudentService {
         if (studentOpt.isPresent()) {
             Student student = studentOpt.get();
             student.setVerified(true);
-            student.setVerificationToken(null); // token no longer needed
+            student.setVerificationToken(null);
             sr.save(student);
             return true;
         }
