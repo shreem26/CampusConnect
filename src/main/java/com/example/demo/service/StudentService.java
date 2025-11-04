@@ -30,7 +30,8 @@ public class StudentService {
     public Student findStudentById(Integer id) {
         return sr.findById(id).orElse(null);
     }
-    public Student findStudentByName(String name){
+
+    public Student findStudentByName(String name) {
         return sr.findByName(name).orElse(null);
     }
     public String registerStudent(Student student){
