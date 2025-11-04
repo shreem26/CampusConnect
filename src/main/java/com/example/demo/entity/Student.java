@@ -29,9 +29,6 @@ public class Student {
     private String bio;
     private String strongSubjects;
 
-    // ✅ List of subjects instead of a single string
-    @ElementCollection
-    private List<String> subjects = new ArrayList<>();
 
     // ✅ Getters and Setters
     public Integer getId() {
