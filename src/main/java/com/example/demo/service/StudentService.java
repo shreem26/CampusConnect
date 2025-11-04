@@ -46,7 +46,6 @@ public class StudentService {
         student.setVerified(false);
         sr.save(student);
 
-        // For now: print verification link in console
         System.out.println("Verification link: http://localhost:8080/auth/verify?token=" + token);
 
         // In real app → you'd send this link by email
