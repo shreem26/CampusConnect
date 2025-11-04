@@ -12,9 +12,6 @@ public class StudentService {
     @Autowired
     private StudentRepository sr;
 
-    @Autowired
-    private StudentService studentService;
-
     public Student saveStudent(Student student) {
         return sr.save(student);
     }
