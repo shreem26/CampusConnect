@@ -15,9 +15,8 @@ public class MessageService {
     public Message saveMessage(Message message) {
         return messageRepository.save(message);
     }
-
-    public List<Message> getMessagesBetween(String senderId, String receiverId) {
-        return messageRepository.findBySenderIdAndReceiverId(senderId, receiverId);
+    public List<Message> getMessagesBetween(String senderId,String receiverId){
+        return mr.findBySenderIdAndReceiverId(senderId,receiverId);
     }
 
     public List<Message> getAllMessages() {

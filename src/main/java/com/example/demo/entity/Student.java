@@ -2,6 +2,9 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Student {
 
@@ -18,7 +21,14 @@ public class Student {
     private String collegeId;
     private String collegeName;
     private String branch;
+    @Column(name = "student_year")
     private int year;
+    private boolean isTutor;
+    private double rating;
+    private String profilePicUrl;
+    private String bio;
+    private String strongSubjects;
+
 
     // ✅ Getters and Setters
     public Integer getId() {
