@@ -72,11 +72,7 @@ public class StudentService {
 
         if (studentOpt.isPresent()) {
             Student student = studentOpt.get();
-
-            // Check password and verification
-            if (student.isVerified() && student.getPassword().equals(password)) {
-                return true;
-            }
+            return student.isVerified() && student.getPassword().equals(password);
         }
         return false;
     }
