@@ -13,9 +13,6 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
     Optional<Student> findByVerificationToken(String token);
     Optional<Student> findByName(String name);
 
-    // ✅ For searching tutors whose subjects contain a keyword
-    @Query("SELECT s FROM Student s JOIN s.subjects subj WHERE LOWER(subj) LIKE LOWER(CONCAT('%', :subject, '%'))")
-    List<Student> searchBySubject(@Param("subject") String subject);
-
-    List<Student> findByNameContainingIgnoreCase(String name);
+    // ✅ Add this line
+    List<Student> findByStrongSubjectsContainingIgnoreCase(String subject);
 }
