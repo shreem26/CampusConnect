@@ -41,7 +41,6 @@ public class StudentService {
             return "Email already registered!";
         }
 
-        // Generate random token for verification
         String token = UUID.randomUUID().toString();
         student.setVerificationToken(token);
         student.setVerified(false);
