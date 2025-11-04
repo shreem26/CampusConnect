@@ -19,7 +19,7 @@ public class StudentService {
         return sr.save(student);
     }
 
-    public List<Student> getAllStudent() {
+    public List<Student> getAllStudents() {
         return sr.findAll();
     }
 
