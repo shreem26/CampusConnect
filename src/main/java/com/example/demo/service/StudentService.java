@@ -55,7 +55,8 @@ public class StudentService {
         // In real app → you'd send this link by email
         return "Signup successful! Please check your email to verify.";
     }
-    public boolean verifyEmail(String token){
+
+    public boolean verifyEmail(String token) {
         Optional<Student> studentOpt = sr.findByVerificationToken(token);
         if (studentOpt.isPresent()) {
             Student student = studentOpt.get();
