@@ -66,7 +66,8 @@ public class StudentService {
         }
         return false;
     }
-    public boolean login(String email, String password){
+
+    public boolean login(String email, String password) {
         Optional<Student> studentOpt = sr.findByEmail(email);
 
         if (studentOpt.isPresent()) {
