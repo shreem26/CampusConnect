@@ -8,8 +8,6 @@ import java.util.*;
 @Repository
 public interface StudentRepository extends JpaRepository<Student, Integer> {
     Optional<Student> findByEmail(String email);
-
-    // find student by verification token
     Optional<Student> findByVerificationToken(String token);
     Optional<Student> findByName(String name);
 
