@@ -77,10 +77,9 @@ public class StudentService {
         return false;
     }
 
-    @GetMapping("/search")
-    public List<Student> searchBySubject(@RequestParam String subject) {
-        return studentService.searchBySubject(subject);
-
+    // ✅ New method for searching tutors/students by subject
+    public List<Student> searchBySubject(String subject) {
+        return sr.findByStrongSubjectsContainingIgnoreCase(subject);
     }
 
 }
