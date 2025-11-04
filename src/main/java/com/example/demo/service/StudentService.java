@@ -48,7 +48,6 @@ public class StudentService {
 
         System.out.println("Verification link: http://localhost:8080/auth/verify?token=" + token);
 
-        // In real app → you'd send this link by email
         return "Signup successful! Please check your email to verify.";
     }
 
