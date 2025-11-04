@@ -44,8 +44,6 @@ public class StudentService {
         String token = UUID.randomUUID().toString();
         student.setVerificationToken(token);
         student.setVerified(false);
-
-        // Save student in DB
         sr.save(student);
 
         // For now: print verification link in console
