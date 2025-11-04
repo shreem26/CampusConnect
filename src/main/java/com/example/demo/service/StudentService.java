@@ -34,7 +34,8 @@ public class StudentService {
     public Student findStudentByName(String name) {
         return sr.findByName(name).orElse(null);
     }
-    public String registerStudent(Student student){
+
+    public String registerStudent(Student student) {
         Optional<Student> existing = sr.findByEmail(student.getEmail());
         if (existing.isPresent()) {
             return "Email already registered!";
