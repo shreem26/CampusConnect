@@ -1,15 +1,20 @@
 package com.example.demo.entity;
-import java.time.*;
-import jakarta.persistence.*;
 
+import jakarta.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Entity
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String message;
     private String senderId;
     private String receiverId;
-    private LocalDate timeStamp;
+    private LocalDate timeStamp= LocalDate.from(LocalDateTime.now());
+
     public void setMessage(String message) {
         this.message = message;
     }
