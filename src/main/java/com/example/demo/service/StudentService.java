@@ -4,9 +4,7 @@ import java.util.*;
 import com.example.demo.entity.Student;
 import com.example.demo.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
